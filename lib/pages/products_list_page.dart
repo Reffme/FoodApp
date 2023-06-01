@@ -14,7 +14,6 @@ class _ShoppingListPageState extends State<ShoppingListPage> {
     return Scaffold(
       appBar: _appBarShoppingList(),
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           DefaultTabController(
             length: 2,
@@ -23,8 +22,9 @@ class _ShoppingListPageState extends State<ShoppingListPage> {
               children: <Widget>[
                 TabBarWidget(tabs: _tabs),
                 const SizedBox(height: 6),
-                const SizedBox(
-                  height: 550, //TODO fix this
+                SizedBox(
+                  height:
+                      MediaQuery.of(context).size.height - 188, //TODO fix this
                   child: TabBarView(
                     children: <Widget>[
                       ListProductPage(),

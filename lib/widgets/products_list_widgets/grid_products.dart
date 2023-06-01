@@ -62,7 +62,7 @@ class _CardGridWidget extends StatelessWidget {
                   ),
                   Text(
                     product.name,
-                    style: TextStyle(fontSize: 20),
+                    style: const TextStyle(fontSize: 20),
                   ),
                   Text(
                     'Категория: ${product.category}',
@@ -89,11 +89,12 @@ class _CardGridWidget extends StatelessWidget {
                           top: Radius.circular(20),
                         ),
                       ),
-                      duration: Duration(milliseconds: 300),
+                      duration: const Duration(milliseconds: 300),
                       content: Text(
                         textAlign: TextAlign.center,
                         '${product.name} в корзине!',
-                        style: TextStyle(color: Colors.white, fontSize: 16),
+                        style:
+                            const TextStyle(color: Colors.white, fontSize: 16),
                       ),
                     ),
                   );
@@ -105,14 +106,14 @@ class _CardGridWidget extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    FaIcon(
+                    const FaIcon(
                       FontAwesomeIcons.cartPlus,
                       color: Colors.white,
                     ),
-                    SizedBox(width: 5),
+                    const SizedBox(width: 5),
                     Text(
                       '${product.price} руб',
-                      style: TextStyle(fontSize: 16, color: Colors.white),
+                      style: const TextStyle(fontSize: 16, color: Colors.white),
                       textAlign: TextAlign.end,
                     ),
                   ],
